@@ -35,13 +35,7 @@ import axios from "axios"
     </v-row>
   </v-container>
 
-    <!-- <div class="">
-      <Label class="cell medium-4">Page:</Label>
-      <select class="cell auto" @change="go_to_page($event)">
-        <option :key="n" v-for="n in total_pages">{{n}}</option>
-      </select>
-    </div> -->
-  </template>
+</template>
 
 <script>
 const url = "http://localhost:9003/orders";
@@ -139,19 +133,6 @@ export default {
         this.count = parseInt(response.data.count)
         this.total_pages = Math.ceil(this.count/5)
     })
-    // console.log(url)
-    // axios.get(url)
-    //     .then(function (response) {
-    //         // handle success
-    //         console.log(response);
-    //     })
-    //     .catch(function (error) {
-    //         // handle error
-    //         console.log(error);
-    //     })
-    //     .finally(function () {
-    //         // always executed
-    //     });
-}  
+  }  
 }
 </script>
