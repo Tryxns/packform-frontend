@@ -12,6 +12,7 @@
     "@mdi/font": "^7.4.47",
     "@vuepic/vue-datepicker": "^7.4.1",
     "axios": "^1.6.7",
+    "moment-timezone": "^0.5.44",
     "vue": "^3.3.11",
     "vue-router": "^4.2.5",
     "vuetify": "^3.5.1"

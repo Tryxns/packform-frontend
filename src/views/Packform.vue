@@ -4,9 +4,11 @@ import axios from "axios"
 import VueDatePicker from '@vuepic/vue-datepicker';
 import '@vuepic/vue-datepicker/dist/main.css'
 import { ref, onMounted, toRaw } from 'vue';
+import moment from 'moment-timezone';
 
 const date = ref();
 const initDate = ref(new Date(2020, 0, 1));
+
 // For demo purposes assign range from the current date
 onMounted(() => {
   const startDate = new Date('01/01/2020');
@@ -78,6 +80,8 @@ function format_calculate_amount(raw_data){
     } else {
       raw_data[x]['total_amount'] = `$${raw_data[x]['total_amount']}`
     }
+    raw_data[x].created_at = moment.tz(raw_data[x].created_at, "Australia/Melbourne").format("LLL")
+    
   }
   return raw_data
 }
