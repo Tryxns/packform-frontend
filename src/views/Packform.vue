@@ -6,7 +6,7 @@ import '@vuepic/vue-datepicker/dist/main.css'
 import { ref, onMounted, toRaw } from 'vue';
 
 const date = ref();
-
+const initDate = ref(new Date(2020, 0, 1));
 // For demo purposes assign range from the current date
 onMounted(() => {
   const startDate = new Date('01/01/2020');
@@ -20,8 +20,16 @@ onMounted(() => {
   <v-container class="">
     <v-row>
       <v-row>
-        <v-text-field v-model="search" hide-details placeholder="Search Order / Product..." class="ma-2" density="compact"></v-text-field>
-        <v-btn color="primary" @click="go_filter()">Go Search</v-btn>
+        <v-col>
+          <v-text-field v-model="search" hide-details placeholder="Search Order / Product..." class="ma-2" density="compact"></v-text-field>
+        </v-col>
+        <v-col>
+          Date Range filter
+          <VueDatePicker v-model="daterange" range :enable-time-picker="false" :start-date="initDate"/>
+        </v-col>
+        <v-col>
+          <v-btn color="primary" @click="go_filter()">Go Search</v-btn>
+        </v-col>
       </v-row>
       <v-data-table-server
         theme="dark"
@@ -38,11 +46,7 @@ onMounted(() => {
       </template>
     </v-data-table-server>
     </v-row>
-    <br>
-    <VueDatePicker v-model="daterange" range :enable-time-picker="false"/>
-    <v-row>
-
-    </v-row>
+  
   </v-container>
 
 </template>
