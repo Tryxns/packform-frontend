@@ -1,0 +1,4 @@
+1. I can get Delivered Amount by multiplying delivered_quantity & price_per_unit because based on the snippet UI given, it supposed be in currency unit
+2. I can get total_amount by multiplying quantity & price_per_unit because based on the snippet UI given, it supposed be in currency unit
+3. I assume Delivered Amount & total_amount used to compare the delivery progress
+4. Based on the snippet UI given, there's only 1 search input box, therefore i think filter orders by part of the order or product name should be merged

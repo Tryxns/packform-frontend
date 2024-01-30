@@ -27,3 +27,7 @@ npm run dev
 ```sh
 npm run build
 ```
+
+### Assumptions
+
+If you here for assessing my work, please don't forget to check the Assumptions file (you can open it by any text editor) in this repo =)
